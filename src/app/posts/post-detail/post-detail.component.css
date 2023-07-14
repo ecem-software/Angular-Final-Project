@@ -1,0 +1,100 @@
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  
+.post-card .header {
+    margin-bottom: 10px;
+  }
+  
+  .post-card .header p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .post-card .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .post-card .content {
+    margin-bottom: 10px;
+  }
+  .content p{
+    background-color: #90caf9;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 17px;
+    width: 40%;
+  }
+  
+  .content h2{
+    width: 40%;
+    
+
+  }
+  .post-card .content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    
+  }
+  
+  .post-card .content p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .post-card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-card .footer div {
+    flex-basis: 20%;
+  }
+  
+  .post-card .footer h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .post-card .footer p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .post-card .footer h2, .post-card .footer p {
+    color: #fff;
+  }
+  
+  .post-card .footer h2,
+  .content h2 {
+    background-color: #1565c0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blue;
+  }
+  
+  .post-card .footer p {
+    background-color: #90caf9;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 17px;
+  }
+  .header p{
+    color: aliceblue;
+  }
+  
+ .footer p{
+    color: rgb(222, 222, 238);
+  }

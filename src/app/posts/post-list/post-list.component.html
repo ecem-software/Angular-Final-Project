@@ -1,4 +1,4 @@
-<table>
+<table class="table-container">
     <thead>
         <tr>
             <th>PostId</th>
@@ -6,6 +6,7 @@
             <th>View Count</th>
             <th>Creation Date</th>
             <th>Post Publish Statement</th>
+            <th>Data Edit</th>
         </tr>
     </thead>
     <tbody>
@@ -16,7 +17,10 @@
             <td>{{item.creationDate}}</td>
             <td>{{item.isPublished}}</td>
             <app-button [buttonText]="'Detail'" [id]= "item.postId" (onButtonClick)="handleDetailClick($event)"></app-button>
+            <i class="fa-solid fa-pen-to-square" style="padding: 4px;"></i>
+
             <app-button [buttonText]="'Delete'" [id]= "item.postId" (onButtonClick)="handleDeleteClick($event)" ></app-button>
+            <i class="fa-sharp fa-solid fa-trash"></i>
         </tr>
     </tbody>
 </table>
@@ -27,4 +31,4 @@
     <button [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
 </div>
 
-<button [routerLink]="'/postadd'">Add Post</button>
+<button [routerLink]="'/postadd'">Add Post <i class="fa-solid fa-blog fa-beat-fade"></i></button>

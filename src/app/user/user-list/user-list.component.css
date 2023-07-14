@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.table-container {
+    margin-top: 50px;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #212529;
+    margin: auto;
+  }
+  
+  .table-container th,
+  .table-container td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #1a7fe3;
+  }
+  
+  .table-container thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #1a7fe3;
+  }
+  
+
+th{
+    background-color:darkblue;
+    color: white;
+    font-family:'Playfair Display', serif;
+}
+tr{
+    background-color: whitesmoke;
+}
+
+
+label,form{
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px 
+  
+}
+
+button{
+    margin-left:  17px;
+    border-radius: 8px;
+    padding: 7px;
+    background-color: #1a7fe3;
+    box-shadow: 3px 3px 3px  rgb(88, 84, 84);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.editMode>label{
+
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    color: rgb(204, 241, 243);
+}
+
+.editMode > label:not(:last-child) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* .buttonDelete:hover{
+    background-color: rgb(225, 109, 109)!important; 
+} */
+

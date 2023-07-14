@@ -1,4 +1,5 @@
-<table>
+<div class="background">
+<table class="table-container">
     <thead>
         <tr>
             <th>Comment ID</th>
@@ -7,6 +8,7 @@
             <th>Comment</th>
             <th>Creation Date</th>
             <th>Is Confirmed</th>
+            <th>EDIT DATA</th>
         </tr>
     </thead>
     <tbody>
@@ -18,12 +20,12 @@
             <td>{{item.creationDate}}</td>
             <td>{{item.isConfirmed}}</td>
             <app-button [buttonText]="'Detail'" [id]= "item.commentId" (onButtonClick)="handleDetailClick($event)"></app-button>
+            <i class="fa-solid fa-pen-to-square" style="padding: 4px;"></i>
             <app-button [buttonText]="'Delete'" [id]= "item.commentId" (onButtonClick)="handleDeleteClick($event)" ></app-button>
+            <i class="fa-sharp fa-solid fa-trash"></i>
         </tr>
     </tbody>
 </table>
-
-<button type="button" routerLink="/commentadd">Add Comment</button>
 
 <div class="pagination" *ngIf="totalPages > 0">
     <button [disabled]="currentPage === 1" (click)="previousPage()">Previous</button>
@@ -31,3 +33,7 @@
     <button [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
 </div>
 
+<button type="button" routerLink="/commentadd">Add Comment <i class="fa-solid fa-comment-dots fa-bounce"></i></button>
+
+
+</div>

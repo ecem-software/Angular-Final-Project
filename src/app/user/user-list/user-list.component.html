@@ -1,11 +1,13 @@
+<body class="userlist-page">
 <table class="table-container">
     <thead>
         <tr>
-            <th>USERID</th>
+            <th>USER_ID</th>
             <th>USERNAME</th>
-            <th>EMAİL</th>
-            <th>CREATİONDATE</th>
-            <th>İSACTİVE</th>
+            <th>E-MAIL</th>
+            <th>CREATION DATE</th>
+            <th>IS ACTİVE</th>
+            <th>EDIT DATA</th>
         </tr>
     </thead>
     <tbody>
@@ -18,16 +20,18 @@
             <td>
                 <app-button [buttonText] = "'Delete'" [id]= "item.userId" (onButtonClick)= "handleDeleteClick($event)" >
                 </app-button>
+                <i class="fa-sharp fa-solid fa-trash"></i>
                 <app-button [buttonText]="'Edit'" [id]= "item.userId" (onButtonClick)="handleEditClick($event)">
                 </app-button>
+                <i class="fa-solid fa-pen-to-square" style="padding: 4px;"></i>
             </td>
         </tr>
     </tbody>
-</table> <br> <hr>
+</table> <br>
 
-<a routerLink="/useradd"><button>Add User</button></a>
+<a routerLink="/useradd"><button>Add User<i class="fa-sharp fa-solid fa-user-plus fa-shake"></i></button></a>
 
-<form *ngIf="editMode">
+<form class="editMode" *ngIf="editMode">
     <label for="username">Username</label>
     <input type="text" [(ngModel)]="username" name= "username" >
     <label for="email">Email</label>
@@ -44,3 +48,5 @@
         <button (click)="handleCancelClick()" type="button">Cancel</button>
     </div>
 </form>
+
+</body>

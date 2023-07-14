@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.table-container {
+    margin-top: 50px;
+    width: 70%;
+    color: #212529;
+    margin: auto;
+  }
+  
+  .table-container th,
+  .table-container td,
+  .table-container tr {
+    padding: 0.75rem;
+    vertical-align: top;
+    border: 1px solid #1a7fe3;
+  }
+  
+
+th{
+    background-color:darkblue;
+    color: white;
+    font-family:'Playfair Display', serif;
+    font-weight: bold;
+}
+tr{
+    background-color: whitesmoke;
+}
+thead{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button{
+    margin-top: 60px;
+}
+
+.editMode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 3px 3px 3px blue;
+    margin-bottom: 40px;
+
+}
+.editMode label{
+    color:rgb(228, 228, 245) ;
+    text-shadow: 3px 3px 3px rgb(176, 160, 21);
+}
+.editMode input,
+.pagination button {
+    margin-bottom: 30px;
+}
+
+.pagination { 
+    color: aquamarine;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    color: black;
+    background-color: #d0dae5;
+    box-shadow: 1px 1px 1px blue;
+    border-radius: 3px;
+}
+
+button#add-category-button {
+    margin-left:  17px;
+    border-radius: 8px;
+    padding: 7px;
+    background-color: #1a7fe3;
+    box-shadow: 3px 3px 3px  rgb(88, 84, 84);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.button1{
+        box-shadow: 3px 3px 3px orange;
+        background-color: blue;
+        margin-top: 30px;
+        text-shadow: 1px 1px 1px orchid;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-weight: bold;
+        color: aquamarine;
+    
+}
+
+.pagination button {
+    margin: 0 5px;
+    color: black;
+    background-color: #d0dae5;
+    box-shadow: 1px 1px 1px blue;
+    border-radius: 3px;
+    padding: 7px;
+  }

@@ -25,6 +25,7 @@ export class PostAddComponent {
   posts: Post[] = [];
 
   constructor(private postService: PostService, private router: Router, private userService: UserService){
+    if (this.userService.getUsers().length === 0)
     this.userService.setUsers();
     this.users = this.userService.getUsers();
     if (this.postService.getPosts().length === 0)

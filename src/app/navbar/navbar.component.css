@@ -1,23 +1,9 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+.blog{
+    text-shadow: 2px 4px 3px blue;
 }
-
-.right-nav {
-    display: flex;
-    gap: 10px;
+.home:hover{
+    text-shadow: 2px 4px 3px  darkblue;
 }
-
-a {
-     text-decoration: none;
-}
-
-.right-nav>:first-child {
-    color: blue;
-}
-
-.right-nav>:first-child:hover {
-    color: red;
+.user:hover{
+    text-shadow: 2px 4px 3px darkblue;
 }

@@ -10,6 +10,7 @@ import { CategoryDetailComponent } from './category/category-detail/category-det
 import { CommentListComponent } from './comments/comment-list/comment-list.component';
 import { CommentAddComponent } from './comments/comment-add/comment-add.component';
 import { CommentDetailComponent } from './comments/comment-detail/comment-detail.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: "userlist", component: UserListComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: "categorylist/:id", component: CategoryDetailComponent},
   {path: "commentlist", component: CommentListComponent},
   {path: "commentadd", component: CommentAddComponent},
-  {path: "commentlist/:id", component: CommentDetailComponent}
+  {path: "commentlist/:id", component: CommentDetailComponent},
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({

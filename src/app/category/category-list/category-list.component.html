@@ -1,9 +1,12 @@
-<table>
+<body class="category-list-page">
+    
+<table class="table-container">
     <thead>
         <tr>
             <th>Category ID</th>
             <th>Category Name</th>
             <th>Creation Date</th>
+            <th>Edit Data</th>
         </tr>
     </thead>
     <tbody>
@@ -11,27 +14,27 @@
             <td>{{item.categoryId}}</td>
             <td>{{item.name}}</td>
             <td>{{item.creationDate}}</td>
-            <app-button [buttonText]="'Detail'" [id]= "item.categoryId" (onButtonClick)="handleDetailClick($event)"></app-button>
-            <app-button [buttonText]="'Delete'" [id]= "item.categoryId" (onButtonClick)="handleDeleteClick($event)" ></app-button>
+            <app-button class="button" [buttonText]="'Detail'" [id]= "item.categoryId" (onButtonClick)="handleDetailClick($event)"></app-button> <i class="fa-solid fa-pen-to-square" style="padding: 4px;"></i>
+            <app-button class="button" [buttonText]="'Delete'" [id]= "item.categoryId" (onButtonClick)="handleDeleteClick($event)" ></app-button>   <i class="fa-sharp fa-solid fa-trash"></i>
         </tr>
     </tbody>
 </table>
+<div class="pagination" *ngIf="totalPages > 0">
+    <button id="previous-button" [disabled]="currentPage === 1" (click)="previousPage()">Previous</button>
+    <span>{{ currentPage }}</span>
+    <button id="next-button" [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
+</div>
+<button  id="add-category-button" (click)="handleAddCategory()">Add Category</button>
 
-<button (click)="handleAddCategory()">Add Category</button>
-
-<form *ngIf="addCategoryForm">
+<form class="editMode" *ngIf="addCategoryForm">
     <label for="name">Name</label>
     <input type="text" [(ngModel)]="newCategoryName" name="name">
     <label for="creationDate">Creation Date</label>
     <input type="date" [(ngModel)]="newCategoryDate" name="creationDate">
     <div>
-        <button type="button" (click)="handleSaveClick()">Save</button>
-        <button type="button" (click)="handleCancelClick()">Cancel</button>
+        <button class="button1" type="button" (click)="handleSaveClick()">Save</button>
+        <button class="button1" type="button" (click)="handleCancelClick()">Cancel</button>
     </div>
 </form>
 
-<div class="pagination" *ngIf="totalPages > 0">
-    <button [disabled]="currentPage === 1" (click)="previousPage()">Previous</button>
-    <span>{{ currentPage }}</span>
-    <button [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
-</div>
+</body>

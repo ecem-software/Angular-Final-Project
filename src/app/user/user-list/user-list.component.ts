@@ -26,7 +26,7 @@ export class UserListComponent {
   constructor(private userService: UserService, private postService: PostService, private commentService: CommentService) {
     if (this.userService.getUsers().length === 0)
       this.userService.setUsers();
-    else
+   
       this.users = this.userService.getUsers();
     if (this.postService.getPosts().length === 0)
       this.postService.setPosts();
@@ -47,9 +47,9 @@ export class UserListComponent {
   }
 
   checkPostsAndComments(id: number): boolean {
-    if (this.postService.getPosts().filter((post) => post.userId === id).length !== 0)
+    if (this.postService.getPosts().filter((post) => Number(post.userId) === id).length !== 0)
       return true;
-    else if (this.commentService.getComments().filter((comment) => comment.userId === id).length !== 0)
+    else if (this.commentService.getComments().filter((comment) => Number(comment.userId) === id).length !== 0)
       return true;
     else
       return false;

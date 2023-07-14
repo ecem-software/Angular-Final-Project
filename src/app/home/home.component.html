@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .welcome-text {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            color: #2e77c0;
+            text-shadow: 3px 3px 3px rgb(233, 233, 241);
+            background-color: #ff69b4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            animation: typing 7s steps(40) infinite;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+    <h1 class="welcome-text" (click)="redirectToUserList()">Welcome to Blog Management</h1>
+    <button (click)="redirectToUserList()">Get Started <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></button>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+button{
+    color: rgb(214, 214, 231);
+    background-color: blue;
+    box-shadow: 3px 3px 3px rgb(247, 149, 242);
+    border-radius: 20px;
+}
+button:hover{
+    transform: scale(1.3);
+}

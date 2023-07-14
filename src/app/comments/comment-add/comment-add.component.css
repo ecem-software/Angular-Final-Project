@@ -1,0 +1,33 @@
+/* label{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 4px 4px 4px blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.form-post{
+    
+    text-align: center;
+
+}
+button{
+    box-shadow: 3px 3px 3px orange;
+    background-color: blue;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px orchid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: aquamarine;
+}
+form> label:not(:last-child) {
+   
+    margin-bottom: 10px;
+}
+button:hover{
+background-color: crimson;
+} */
