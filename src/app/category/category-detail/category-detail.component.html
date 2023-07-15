@@ -16,8 +16,8 @@
     </div>
 </div>
 
-<button (click)="handleEditClick()">Edit</button>
-<button [routerLink]="'/categorylist'">Return Category List</button>
+<button class="detail-button" (click)="handleEditClick()">Edit</button>
+<button class="detail-button" [routerLink]="'/categorylist'">Return Category List</button>
 
 <form *ngIf="editMode">
     <label for="name">Name</label>

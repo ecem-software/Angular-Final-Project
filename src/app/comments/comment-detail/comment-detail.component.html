@@ -7,7 +7,7 @@
         </div>
         <div class="content">
             <h2>Content</h2>
-            <p>{{comment.comment}}</p>
+            <p>{{comment.comment | titlecase}}</p>
         </div>
         <div class="footer">
             <div>
@@ -20,4 +20,4 @@
     </div>
 </div>
 
-<button type="button" routerLink="/commentlist">Return Comment List</button>
+<button class="detail-button" type="button" routerLink="/commentlist">Return Comment List</button>

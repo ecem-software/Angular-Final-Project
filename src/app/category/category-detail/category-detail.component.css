@@ -1,0 +1,101 @@
+.category-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  
+.category-card .header {
+    margin-bottom: 10px;
+  }
+  
+  .category-card .header p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .category-card .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .category-card .content {
+    margin-bottom: 10px;
+  }
+  .content p{
+    background-color: #90caf9;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 17px;
+    width: 40%;
+    box-shadow: 3px 3px 3px orange;
+  }
+  
+  .category-card .content h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #def7f7;
+     width: 40%;
+  }
+  
+  .category-card .content p {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .category-card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .category-card .footer div {
+    flex-basis: 20%;
+  }
+  
+  .category-card .footer p {
+    font-size: 14px;
+    background-color: #90caf9;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 17px;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px orange;
+  }
+  
+  .category-card .footer h2, .category-card .footer p {
+    color: #fff;
+  }
+  
+  .category-card .footer h2,
+  .content h2 {
+    background-color: #1565c0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px blue;
+  }
+  
+  .header p{
+    color: aliceblue;
+  }
+  
+ .footer p{
+    color: rgb(222, 222, 238);
+  }
+.detail-button{
+    box-shadow: 3px 3px 3px orange;
+    background-color: blue;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px orchid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: aquamarine;
+}

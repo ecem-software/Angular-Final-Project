@@ -1,9 +1,18 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 button{
     color: rgb(214, 214, 231);
     background-color: blue;
     box-shadow: 3px 3px 3px rgb(247, 149, 242);
     border-radius: 20px;
+    padding: 4px;
+    text-shadow: 1px 1px 1px rgb(247, 149, 242);
 }
 button:hover{
     transform: scale(1.3);
+}
+.welcome-text{
+    font-family: 'Pacifico', cursive;
 }

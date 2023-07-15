@@ -6,7 +6,7 @@
         </div>
         <div class="content">
             <h2>Post Content</h2>
-            <p>{{post.content}}</p>
+            <p>{{post.content | titlecase}}</p>
         </div>
         <div class="footer">
             <div>
@@ -34,8 +34,8 @@
     </div>
 </div>
 
-<button (click)="handleEditClick()" type="button">Edit</button>
-<button (click)="handleDeleteClick()" type="button">Delete</button>
+<button class="detail-button" (click)="handleEditClick()" type="button">Edit</button>
+<button class="detail-button" (click)="handleDeleteClick()" type="button">Delete</button>
 
 <form *ngIf="editMode">
     <label for="title">Title</label>
@@ -58,4 +58,4 @@
     </div>
 </form>
 
-<button [routerLink]="'/postlist'">Return Post List</button>
+<button class="detail-button" [routerLink]="'/postlist'">Return Post List</button>
