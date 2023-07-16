@@ -10,11 +10,11 @@ export class CategoryService {
   private categories: Category[] = [];
 
   constructor(private postService: PostService) { }
-
+ // Returns the categories
   getCategories(): Category[] {
     return this.categories;
   }
-
+ // Sets the categories using default categories data
   setCategories(): void {
     this.categories = defaultcategories;
   }
@@ -52,11 +52,12 @@ export class CategoryService {
     else
       alert("This category already exist");
   }
-
+   // Finds a category by its name
   findCategoryByName(name: string) {
     return this.categories.find((category)=> category.name === name )
   }
 
+   // Checks if a category with the same name and ID already exists
   checkUniqueCategory(name: string, id: number): boolean {
     if(this.categories.find((category)=> category.name === name.toLowerCase()) !== undefined
     && this.findCategoryByName(name.toLowerCase())!.categoryId !== id)
