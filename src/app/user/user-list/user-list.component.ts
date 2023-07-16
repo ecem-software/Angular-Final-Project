@@ -15,7 +15,7 @@ export class UserListComponent {
   users: User[] = [];
   alphabeticalSort: boolean = false;
 
-  //forms kısmında yer alan değişkenleri tanımladık.
+  //Define the variables in the forms part.
   username: string= "";
   email: string= "";
   creationDate: string="";
@@ -55,7 +55,7 @@ export class UserListComponent {
       this.commentService.setComments();
   }
 
-  //son kullanıcı kalması durumunda hata vermesini sağladı.
+  //It was made to give an error if the last user remains.
   handleDeleteClick($event: number) {
     if(this.userService.userCount() === 1)
       alert("You can not delete last users.")
