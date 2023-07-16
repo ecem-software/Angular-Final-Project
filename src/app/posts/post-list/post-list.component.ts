@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
 import { Post } from '../post';
-import { Router } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class PostListComponent {
   filterType: string = 'userId';
   filterValue: string = '';
 
-  constructor(private postService: PostService, private router: Router) {
+  constructor(private postService: PostService, private router: Router,private route: ActivatedRoute) {
     if (this.postService.getPosts().length === 0)
       this.postService.setPosts();
     this.posts = this.postService.getPosts()
@@ -34,7 +34,12 @@ export class PostListComponent {
   }
 
   ngOnInit(){
-    this.pageChanged(this.currentPage);
+    this.route.queryParamMap.subscribe(params => {
+      this.filterValue = params.get('filterValue') || '';
+      this.filterType = params.get('filterType') || 'userId';
+      this.pageChanged(1);
+      this.applyFilter();
+    });
   }
 
   pageChanged(page: number): void {
@@ -66,7 +71,16 @@ export class PostListComponent {
     return Math.ceil(this.posts.length / this.itemsPerPage);
   }
   onFilterChange(): void {
-    this.pageChanged(1); // İlk sayfaya geçiş
+    this.currentPage = 1;
+    this.applyFilter();
+    const queryParams = {
+      filterType: this.filterType,
+      filterValue: this.filterValue
+    };
+    this.router.navigate([], { queryParams: queryParams });
+  }
+
+  applyFilter(): void {
     if (this.filterType === 'userId') {
       this.filterByUserId();
     } else if (this.filterType === 'postId') {

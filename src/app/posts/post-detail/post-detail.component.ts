@@ -35,12 +35,12 @@ export class PostDetailComponent {
   private categoryService: CategoryService) {
     if (this.userService.getUsers().length === 0)
       this.userService.setUsers();
-    else
-      this.users = this.userService.getUsers();
+   
+    this.users = this.userService.getUsers();
     if (this.categoryService.getCategories().length === 0)
       this.categoryService.setCategories();
-    else
-      this.categories = this.categoryService.getCategories();
+    
+    this.categories = this.categoryService.getCategories();
  }
 
  ngOnInit() {

@@ -19,13 +19,15 @@
 <button class="detail-button" (click)="handleEditClick()">Edit</button>
 <button class="detail-button" [routerLink]="'/categorylist'">Return Category List</button>
 
+<!-- Edit Butonları Eklendi -->
+
 <form *ngIf="editMode">
     <label for="name">Name</label>
     <input type="text" [(ngModel)]="updatedCategory.name" name="name">
     <label for="creationDate">Creation Date</label>
     <input type="date" [(ngModel)]="updatedCategory.creationDate" name="creationDate">
     <div>
-        <button type="button" (click)="handleSaveClick()">Save</button>
-        <button type="button" (click)="handleCancelClick()">Cancel</button>
+        <button class="edit-button" type="button" (click)="handleSaveClick()">Save</button>
+        <button class="edit-button" type="button" (click)="handleCancelClick()">Cancel</button>
     </div>
 </form>

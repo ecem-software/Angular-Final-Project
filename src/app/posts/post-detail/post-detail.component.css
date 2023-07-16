@@ -111,4 +111,27 @@
     font-weight: bold;
     color: aquamarine;
 }
-
+.postlist-edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+}
+.save{
+  box-shadow: 3px 3px 3px orange;
+    background-color: blue;
+    margin-top: 30px;
+    text-shadow: 1px 1px 1px orchid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    font-weight: bold;
+    color: aquamarine;
+}
+.save:hover{
+  background-color: rgb(233, 55, 55);
+}
+label{
+  color: #ccc;
+  box-shadow: 1px 1px 1px white;
+}

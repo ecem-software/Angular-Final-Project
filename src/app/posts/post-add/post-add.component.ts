@@ -4,6 +4,8 @@ import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/user/user.service';
 import { User } from 'src/app/user/user';
+import { Category } from 'src/app/category/category';
+import { CategoryService } from 'src/app/category/category.service';
 @Component({
   selector: 'app-post-add',
   templateUrl: './post-add.component.html',
@@ -23,14 +25,18 @@ export class PostAddComponent {
 
   users: User[] = [];
   posts: Post[] = [];
+  categories: Category[] = [];
 
-  constructor(private postService: PostService, private router: Router, private userService: UserService){
+  constructor(private postService: PostService, private router: Router, private userService: UserService, private categoryService: CategoryService){
     if (this.userService.getUsers().length === 0)
-    this.userService.setUsers();
+      this.userService.setUsers();
     this.users = this.userService.getUsers();
     if (this.postService.getPosts().length === 0)
       this.postService.setPosts();
     this.posts  =this.postService.getPosts();
+    if (this.categoryService.getCategories().length === 0)
+      this.categoryService.setCategories();
+    this.categories=this.categoryService.getCategories();
   }
 
 

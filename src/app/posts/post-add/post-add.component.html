@@ -16,6 +16,10 @@
     <select [(ngModel)]="post.userId" name="user">
         <option *ngFor="let user of users" [value]="user.userId">{{user.username}}</option>
     </select>
+    <label for="user">Category</label>
+    <select [(ngModel)]="post.categoryId" name="category">
+        <option *ngFor="let category of categories" [value]="category.categoryId">{{category.name}}</option>
+    </select>
     <div>
         <button (click)="handleSaveClick()" type="button">Save</button>
         <button (click)="handleCancelClick()" type="button">Cancel</button>
