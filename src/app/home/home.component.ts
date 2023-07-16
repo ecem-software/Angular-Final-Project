@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+// Redirects to the userlist page
   redirectToUserList() {
     this.router.navigate(['/userlist']);
   }

@@ -23,6 +23,7 @@ export class PostListComponent {
     this.posts = this.postService.getPosts()
 
   }
+  // Handles the delete button click event for a post
   handleDeleteClick($event: number): void {
     this.postService.deletePost($event);
     this.posts = this.postService.getPosts();
@@ -32,7 +33,7 @@ export class PostListComponent {
   handleDetailClick($event: number): void {
     this.router.navigate(["/postlist/", $event]);
   }
-
+// Filters are created
   ngOnInit(){
     this.route.queryParamMap.subscribe(params => {
       this.filterValue = params.get('filterValue') || '';
@@ -41,7 +42,7 @@ export class PostListComponent {
       this.applyFilter();
     });
   }
-
+ // Updates the paged data when the page changes
   pageChanged(page: number): void {
     const startIndex = (page - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
@@ -66,10 +67,12 @@ export class PostListComponent {
       this.pageChanged(this.currentPage);
     }
   }
-
+// Calculates the total number of pages based on the items per page
   get totalPages(): number {
     return Math.ceil(this.posts.length / this.itemsPerPage);
   }
+
+  // Handles the filter change event
   onFilterChange(): void {
     this.currentPage = 1;
     this.applyFilter();
@@ -89,7 +92,7 @@ export class PostListComponent {
       this.filterByCategoryId();
     }
   }
-
+//  Functions are created for 3 type of filter 
   filterByUserId(): void {
     if (this.filterValue.trim() === '') {
       this.pagedData = this.posts.slice(0, this.itemsPerPage);
