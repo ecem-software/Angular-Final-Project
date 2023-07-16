@@ -62,4 +62,36 @@ button{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.sort{
+    color: white;
+}
+.container{
+    /* display: flex; */
+    float: left;
+}
 
+.container {
+    display: flex;
+    /* flex-direction: column; */
+  }
+  
+  .left-input {
+    position: relative;
+    margin-right: 10px; 
+    margin-bottom: 7px;
+    margin-left: 0px;
+  }
+  
+  .left-input span {
+   color: blue;
+   box-shadow:3px 3px 3px chartreuse;
+   margin-right: 10px;
+   margin-bottom: 8px;
+   
+  }
+  .right-input {
+    position: sticky;
+    top: 0;
+    margin-bottom: 8px;
+    
+  }

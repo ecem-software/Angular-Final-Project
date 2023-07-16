@@ -93,6 +93,9 @@ button#add-category-button {
         color: aquamarine;
     
 }
+.button1:hover{
+background-color: orangered;
+}
 
 .pagination button {
     margin: 0 5px;
@@ -102,3 +105,4 @@ button#add-category-button {
     border-radius: 17px;
     padding: 7px;
   }
+  span{box-shadow: 3px 3px 3px chartreuse;}

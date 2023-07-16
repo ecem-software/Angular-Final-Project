@@ -37,15 +37,14 @@
   }
   
   .category-card .content h2 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     color: #def7f7;
      width: 40%;
   }
   
   .category-card .content p {
-    font-size: 14px;
-    color: #fff;
+    font-size: 17px;
     font-weight: bold;
   }
   
@@ -60,7 +59,7 @@
   }
   
   .category-card .footer p {
-    font-size: 14px;
+    font-size: 17px;
     background-color: #90caf9;
     padding: 5px;
     border-radius: 5px;
@@ -70,7 +69,7 @@
   }
   
   .category-card .footer h2, .category-card .footer p {
-    color: #fff;
+    color: #666;
   }
   
   .category-card .footer h2,
@@ -98,4 +97,7 @@
     margin-right: 10px;
     font-weight: bold;
     color: aquamarine;
+}
+.content p{
+  color: #666;
 }

@@ -60,3 +60,6 @@ button{
   box-shadow: 1px 1px 1px blue;
   border-radius: 17px;
 }
+span{
+  box-shadow: 3px 3px 3px chartreuse;
+}

@@ -23,6 +23,9 @@
     font-weight: bold;
     color: #333;
   }
+  .header p{
+    color: aliceblue;
+  }
   
   .post-card .content {
     margin-bottom: 10px;
@@ -39,7 +42,6 @@
   .content h2{
     width: 40%;
     
-
   }
   .post-card .content h2 {
     font-size: 18px;
@@ -49,7 +51,7 @@
   }
   
   .post-card .content p {
-    font-size: 14px;
+    font-size: 17px;
     color: #666;
     font-weight: bold;
   }
@@ -71,14 +73,16 @@
   }
   
   .post-card .footer p {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
   }
   
-  .post-card .footer h2, .post-card .footer p {
+  .post-card .footer h2, .post-card{
     color: #fff;
   }
-  
+  .post-card .footer p{
+    color: #666;
+  }
   .post-card .footer h2,
   .content h2 {
     background-color: #1565c0;
@@ -95,13 +99,7 @@
     font-weight: bold;
     box-shadow: 3px 3px 3px orange;
   }
-  .header p{
-    color: aliceblue;
-  }
-  
- .footer p{
-    color: rgb(222, 222, 238);
-  }
+ 
 .detail-button{
     box-shadow: 3px 3px 3px orange;
     background-color: blue;
@@ -113,3 +111,4 @@
     font-weight: bold;
     color: aquamarine;
 }
+

@@ -1,4 +1,20 @@
 <body class="userlist-page">
+    <div class="container">
+        <div class="left-input">
+            
+            <span><div class="right-input">
+                <label class="sort">
+                    <input type="checkbox" [(ngModel)]="alphabeticalSort" (change)="onCheckboxChange()" />
+                    Alphabetical Sort
+                </label>
+                </div></span>
+                <span>Filter By </span>
+         <input type="text" [(ngModel)]="filterTerm" (input)="onFilterChange()" placeholder="Filter by Username" />
+        </div>
+
+      
+ </div>     
+ 
 <table class="table-container">
     <thead>
         <tr>

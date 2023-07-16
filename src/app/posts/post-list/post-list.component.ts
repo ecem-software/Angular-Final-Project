@@ -14,8 +14,10 @@ export class PostListComponent {
   pagedData: Post[] = [];
   currentPage = 1;
   itemsPerPage = 10;
+  filterType: string = 'userId';
+  filterValue: string = '';
 
-  constructor(private postService: PostService, private router: Router, ) {
+  constructor(private postService: PostService, private router: Router) {
     if (this.postService.getPosts().length === 0)
       this.postService.setPosts();
     this.posts = this.postService.getPosts()
@@ -63,6 +65,42 @@ export class PostListComponent {
   get totalPages(): number {
     return Math.ceil(this.posts.length / this.itemsPerPage);
   }
+  onFilterChange(): void {
+    this.pageChanged(1); // İlk sayfaya geçiş
+    if (this.filterType === 'userId') {
+      this.filterByUserId();
+    } else if (this.filterType === 'postId') {
+      this.filterByPostId();
+    } else if (this.filterType === 'categoryId') {
+      this.filterByCategoryId();
+    }
+  }
 
+  filterByUserId(): void {
+    if (this.filterValue.trim() === '') {
+      this.pagedData = this.posts.slice(0, this.itemsPerPage);
+    } else {
+      const userId = parseInt(this.filterValue, 10);
+      this.pagedData = this.posts.filter(post => post.userId === userId).slice(0, this.itemsPerPage);
+    }
+  }
+
+  filterByPostId(): void {
+    if (this.filterValue.trim() === '') {
+      this.pagedData = this.posts.slice(0, this.itemsPerPage);
+    } else {
+      const postId = parseInt(this.filterValue, 10);
+      this.pagedData = this.posts.filter(post => post.postId === postId).slice(0, this.itemsPerPage);
+    }
+  }
+
+  filterByCategoryId(): void {
+    if (this.filterValue.trim() === '') {
+      this.pagedData = this.posts.slice(0, this.itemsPerPage);
+    } else {
+      const categoryId = parseInt(this.filterValue, 10);
+      this.pagedData = this.posts.filter(post => post.categoryId === categoryId).slice(0, this.itemsPerPage);
+    }
+  }
 
 }

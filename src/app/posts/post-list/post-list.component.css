@@ -63,3 +63,23 @@ button{
   box-shadow: 1px 1px 1px blue;
   border-radius: 17px;
 }
+.left-option {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.right-option {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.select-filter {
+  color: blue;
+}
+span{
+  color:  #1a7fe3;;
+ font-weight: bold;
+  margin-right: 7px;
+  box-shadow: 3px 3px 3px chartreuse;
+}

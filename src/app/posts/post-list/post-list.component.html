@@ -1,3 +1,18 @@
+<div class="left-option">
+    <span>Filter By</span>
+  <select [(ngModel)]="filterType" (ngModelChange)="onFilterChange()">
+    <option value="userId">User ID</option>
+    <option value="postId">Post ID</option>
+    <option value="categoryId">Category ID</option>
+  </select>
+</div>
+
+<div class="right-option">
+    <span>Filter Value:</span>
+  <input type="text" [(ngModel)]="filterValue" (input)="onFilterChange()" placeholder="Enter a number" />
+</div>
+
+
 <table class="table-container">
     <thead>
         <tr>

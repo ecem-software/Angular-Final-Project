@@ -13,6 +13,7 @@ import { CommentService } from 'src/app/comments/comment.service';
 })
 export class UserListComponent {
   users: User[] = [];
+  alphabeticalSort: boolean = false;
 
   //forms kısmında yer alan değişkenleri tanımladık.
   username: string= "";
@@ -22,6 +23,25 @@ export class UserListComponent {
   editMode: boolean=false;
   userId: number=0;
 
+  onCheckboxChange() {
+    if (this.alphabeticalSort) {
+      this.users.sort((a, b) => a.username.localeCompare(b.username));
+    } else {
+      this.users.sort((a, b) => a.userId - b.userId);
+    }
+  }  filterTerm: string = '';
+
+  onFilterChange() {
+    if (this.filterTerm.trim() === '') {
+      this.users = this.userService.getUsers();
+    } else {
+      this.users = this.userService.getUsers().filter(user =>
+        user.username.toLowerCase().includes(this.filterTerm.toLowerCase())
+      );
+    }
+  }
+
+  
 
   constructor(private userService: UserService, private postService: PostService, private commentService: CommentService) {
     if (this.userService.getUsers().length === 0)
