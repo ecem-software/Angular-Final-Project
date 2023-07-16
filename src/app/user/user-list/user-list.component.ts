@@ -23,6 +23,7 @@ export class UserListComponent {
   editMode: boolean=false;
   userId: number=0;
 
+  // This function is used for alphabeticalSort.
   onCheckboxChange() {
     if (this.alphabeticalSort) {
       this.users.sort((a, b) => a.username.localeCompare(b.username));
@@ -31,6 +32,7 @@ export class UserListComponent {
     }
   }  filterTerm: string = '';
 
+// This function provides filter according to username.
   onFilterChange() {
     if (this.filterTerm.trim() === '') {
       this.users = this.userService.getUsers();
@@ -41,7 +43,6 @@ export class UserListComponent {
     }
   }
 
-  
 
   constructor(private userService: UserService, private postService: PostService, private commentService: CommentService) {
     if (this.userService.getUsers().length === 0)
@@ -54,7 +55,7 @@ export class UserListComponent {
       this.commentService.setComments();
   }
 
-  //son kullanıcı kalması durumunda hata vermesini sağladık.
+  //son kullanıcı kalması durumunda hata vermesini sağladı.
   handleDeleteClick($event: number) {
     if(this.userService.userCount() === 1)
       alert("You can not delete last users.")
