@@ -133,5 +133,6 @@
 }
 label{
   color: #ccc;
-  box-shadow: 1px 1px 1px white;
+  box-shadow: 3px 3px 3px rgb(19, 19, 214);
+  font-weight: bold;
 }
